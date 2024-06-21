@@ -3,6 +3,7 @@ import foodItems from "../../FoodData"
 import FoodCard from "../FoodCard/FoodCard"
 import "../../FoodData"
 
+
 function FoodList() {
     return (
         <>
@@ -10,11 +11,12 @@ function FoodList() {
             {foodItems.map((food, index) => (
                 <FoodCard
                     key={index}
+                    id={food.id}
                     name={food.name}
                     image={food.image}
                     description={food.description}
-                    price={food.price}
-                    
+                    rating={food.rating}
+
                 />
             ))}
         </div>
